@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Walle Skill Seed</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- UI 依赖 -->
+        <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css">
+        <link rel="stylesheet" href="bower_components/walle-material-ui/dist/css/core.min.css">
+        <link rel="stylesheet" href="bower_components/walle-material-ui/dist/css/svg.symbol.css">
+        <link rel="stylesheet" href="bower_components/swiper/dist/css/swiper.min.css">
+
+        <link rel="stylesheet" type="text/css" href="styles/main.css" />
+
+        <base href="/">
+    </head>
+    <body>
+      <div ms-controller="root">
+        <div ms-include-src="page"  data-include-loaded="pageLoaded" data-include-rendered="pageRendered"></div>
+      </div>
+      
+      <script>
+      require('behaviorify/register-es6');
+      require('jibo');
+      console.log(window.jibo);
+      window.$ = window.jQuery = require('./bower_components/jquery/dist/jquery.js');
+      </script>
+      <script>
+        // 用于加载requirejs，因为采用file协议，所以指定main.js时要使用file路径拼接
+        var head = document.querySelector('head');
+        var script = document.createElement('script');
+        script.setAttribute('data-main', __dirname + '/main.js');
+        script.setAttribute('charset', 'utf-8');
+        script.setAttribute('src', __dirname + '/bower_components/requirejs/require.js');
+        head.appendChild(script);
+      </script>
+    </body>
+</html>

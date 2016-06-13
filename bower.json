@@ -1,0 +1,13 @@
+{
+  "name" : "walle-skill-seed",
+  "authors" : [
+    "huhao"
+  ],
+  "descriptions" : "walle skill seed project for developer",
+  "main" : [
+    "src/main.js"
+  ],
+  "dependencies" : {
+    "walle-material-ui" : "0.1.0"
+  }
+}
